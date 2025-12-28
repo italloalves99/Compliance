@@ -1,0 +1,126 @@
+[15-Sep-2025 21:07:33 America/Fortaleza] PHP Warning:  require_once(/home1/itallo69/public_html/compliance/api/../src/Controllers/EmpresaController.php): Failed to open stream: No such file or directory in /home1/itallo69/public_html/compliance/api/empresas.php on line 8
+[15-Sep-2025 21:07:33 America/Fortaleza] PHP Fatal error:  Uncaught Error: Failed opening required '/home1/itallo69/public_html/compliance/api/../src/Controllers/EmpresaController.php' (include_path='.:/opt/cpanel/ea-php83/root/usr/share/pear') in /home1/itallo69/public_html/compliance/api/empresas.php:8
+Stack trace:
+#0 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/empresas.php on line 8
+[23-Sep-2025 21:09:49 America/Fortaleza] PHP Warning:  Trying to access array offset on null in /home1/itallo69/public_html/compliance/api/denuncia.php on line 67
+[23-Sep-2025 21:10:11 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_empresa` FOREIGN KEY (`id_empresa`) REFERENCES `empresas` (`id_empresa`) ON DELETE CASCADE ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 21:17:33 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 21:19:01 America/Fortaleza] PHP Warning:  Trying to access array offset on null in /home1/itallo69/public_html/compliance/api/denuncia.php on line 15
+[23-Sep-2025 21:19:01 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_empresa' cannot be null in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 21:19:28 America/Fortaleza] PHP Warning:  Trying to access array offset on null in /home1/itallo69/public_html/compliance/api/denuncia.php on line 15
+[23-Sep-2025 21:19:28 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_empresa' cannot be null in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 21:19:37 America/Fortaleza] PHP Warning:  Trying to access array offset on null in /home1/itallo69/public_html/compliance/api/denuncia.php on line 15
+[23-Sep-2025 21:19:37 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_empresa' cannot be null in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 22:02:34 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 22:02:35 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[23-Sep-2025 22:02:35 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[24-Sep-2025 20:40:41 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:54
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(54): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 54
+[24-Sep-2025 20:41:38 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[24-Sep-2025 21:00:01 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:14
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(14): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 14
+[24-Sep-2025 21:03:46 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:24
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 24
+[05-Oct-2025 19:49:44 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 19:50:05 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 19:51:37 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 19:52:51 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 20:06:13 America/Fortaleza] PHP Warning:  Trying to access array offset on null in /home1/itallo69/public_html/compliance/api/denuncia.php on line 62
+[05-Oct-2025 20:06:13 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_empresa' cannot be null in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 20:14:30 America/Fortaleza] PHP Warning:  Trying to access array offset on null in /home1/itallo69/public_html/compliance/api/denuncia.php on line 62
+[05-Oct-2025 20:14:30 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'id_empresa' cannot be null in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 20:40:06 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[05-Oct-2025 20:46:13 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:61
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(61): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 61
+[06-Oct-2025 20:38:34 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`itallo69_compliance`.`denuncias`, CONSTRAINT `fk_denuncia_filial` FOREIGN KEY (`id_filial`) REFERENCES `filiais` (`id_filial`) ON DELETE SET NULL ON UPDATE CASCADE) in /home1/itallo69/public_html/compliance/api/denuncia.php:24
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 24
+[07-Oct-2025 14:36:58 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'termo' at row 1 in /home1/itallo69/public_html/compliance/api/denuncia.php:24
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 24
+[07-Oct-2025 14:38:02 America/Fortaleza] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'termo' at row 1 in /home1/itallo69/public_html/compliance/api/denuncia.php:24
+Stack trace:
+#0 /home1/itallo69/public_html/compliance/api/denuncia.php(24): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home1/itallo69/public_html/compliance/api/denuncia.php on line 24

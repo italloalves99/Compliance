@@ -1,0 +1,216 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API de Denúncias - Compliance",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://aliancadev.com/compliance/api",
+      "description": "Servidor de Produção"
+    }
+  ],
+  "paths": {
+    "/denuncia.php": {
+      "post": {
+        "summary": "Criar denúncia básica",
+        "description": "Cria um registro de denúncia com os campos básicos obrigatórios.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id_empresa": { "type": "integer" },
+                  "id_filial": { "type": "integer" },
+                  "atos_ilicitos": { "type": "string" },
+                  "conduta": { "type": "string" },
+                  "descumprimento_normas": { "type": "string" },
+                  "tipo_denuncia": { "type": "string" },
+                  "sigilo_informacoes": { "type": "string" },
+                  "termo": { "type": "boolean" },
+                  "email_notificacao": { "type": "string" }
+                },
+                "required": ["id_empresa", "termo"]
+              },
+              "example": {
+                "id_empresa": 1,
+                "id_filial": 2,
+                "atos_ilicitos": "Fraude",
+                "conduta": "Assédio Moral",
+                "descumprimento_normas": "Políticas Internas",
+                "tipo_denuncia": "Anônima",
+                "sigilo_informacoes": "Sim",
+                "termo": true,
+                "email_notificacao": "teste@empresa.com"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Denúncia criada com sucesso",
+            "content": {
+              "application/json": {
+                "example": { "success": true, "id": 15 }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar denúncia",
+        "description": "Atualiza os campos de uma denúncia existente.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id_denuncia": { "type": "integer" },
+                  "atos_ilicitos": { "type": "string" },
+                  "conduta": { "type": "string" },
+                  "descumprimento_normas": { "type": "string" },
+                  "onde_ocorreu": { "type": "string" },
+                  "quando_ocorreu": { "type": "string" },
+                  "quem_cometeu": { "type": "string" },
+                  "continua_ocorrendo": { "type": "string" },
+                  "testemunhas": { "type": "string" },
+                  "descreva_ocorrido": { "type": "string" },
+                  "grau_certeza": { "type": "string" }
+                },
+                "required": ["id_denuncia"]
+              },
+              "example": {
+                "id_denuncia": 3,
+                "atos_ilicitos": "Corrupção",
+                "conduta": "Assédio Sexual",
+                "descumprimento_normas": "Legislação Trabalhista",
+                "onde_ocorreu": "Setor Financeiro",
+                "quando_ocorreu": "2025-09-20 10:30",
+                "quem_cometeu": "Gestor de equipe",
+                "continua_ocorrendo": "Sim",
+                "testemunhas": "João, Maria",
+                "descreva_ocorrido": "Descrição detalhada...",
+                "grau_certeza": "Alta"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Denúncia atualizada com sucesso",
+            "content": {
+              "application/json": {
+                "example": { "success": true }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Consultar denúncia",
+        "description": "Consulta uma denúncia pelo **id** ou pelo **protocolo**.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "schema": { "type": "integer" },
+            "description": "ID da denúncia"
+          },
+          {
+            "in": "query",
+            "name": "protocolo",
+            "schema": { "type": "string" },
+            "description": "Protocolo da denúncia"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Detalhes da denúncia",
+            "content": {
+              "application/json": {
+                "example": {
+                  "id_denuncia": 3,
+                  "id_empresa": 1,
+                  "atos_ilicitos": "Fraude",
+                  "conduta": "Assédio Moral",
+                  "status": "pendente",
+                  "protocolo": "DN-2025-XYZ123"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Parâmetro inválido"
+          }
+        }
+      }
+    },
+    "/denuncia.php?tipo=completo": {
+      "post": {
+        "summary": "Criar denúncia completa",
+        "description": "Cria uma denúncia já incluindo informações detalhadas (ex: onde ocorreu, testemunhas, grau de certeza, etc).",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id_empresa": { "type": "integer" },
+                  "id_filial": { "type": "integer" },
+                  "atos_ilicitos": { "type": "string" },
+                  "conduta": { "type": "string" },
+                  "descumprimento_normas": { "type": "string" },
+                  "tipo_denuncia": { "type": "string" },
+                  "sigilo_informacoes": { "type": "string" },
+                  "termo": { "type": "boolean" },
+                  "email_notificacao": { "type": "string" },
+                  "onde_ocorreu": { "type": "string" },
+                  "quando_ocorreu": { "type": "string" },
+                  "quem_cometeu": { "type": "string" },
+                  "continua_ocorrendo": { "type": "string" },
+                  "testemunhas": { "type": "string" },
+                  "descreva_ocorrido": { "type": "string" },
+                  "grau_certeza": { "type": "string" }
+                },
+                "required": ["id_empresa", "termo"]
+              },
+              "example": {
+                "id_empresa": 1,
+                "id_filial": 2,
+                "atos_ilicitos": "Fraude",
+                "conduta": "Assédio Moral",
+                "descumprimento_normas": "Políticas Internas",
+                "tipo_denuncia": "Anônima",
+                "sigilo_informacoes": "Sim",
+                "termo": true,
+                "email_notificacao": "teste@empresa.com",
+                "onde_ocorreu": "Setor Financeiro",
+                "quando_ocorreu": "2025-09-23 08:30",
+                "quem_cometeu": "Gestor X",
+                "continua_ocorrendo": "Sim",
+                "testemunhas": "Maria, João",
+                "descreva_ocorrido": "Descrição detalhada do ocorrido...",
+                "grau_certeza": "Alta"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Denúncia completa criada com sucesso",
+            "content": {
+              "application/json": {
+                "example": { "success": true, "id": 20 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
