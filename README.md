@@ -30,7 +30,7 @@ You can access the live version of the application here:
 ## 🛠️ How to Run Locally
 
 1. Clone this repository:
-   bash https://github.com/italloalves99/Compliance.git
+   git clone https://github.com/italloalves99/Compliance.git
 
 2. Create a MySQL database (example: compliance)
 
